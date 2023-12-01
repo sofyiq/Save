@@ -1,4 +1,3 @@
-android==1.0
 arabic-reshaper==3.0.0
 asSQL==2.0.3
 astroid==2.8.0
