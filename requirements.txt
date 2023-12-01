@@ -10,7 +10,6 @@ certifi==2023.7.22
 cffi==1.16.0
 charset-normalizer==3.3.2
 clear==2.0.0
-cmake @ file:///home/n0n3m4/Desktop/Pydroid/zBuildPrepared/cmake-3.20.3-py3-none-any.whl
 colorama==0.4.6
 crypto==1.4.1
 DateTime==5.2
