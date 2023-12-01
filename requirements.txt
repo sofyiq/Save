@@ -2,7 +2,6 @@ arabic-reshaper==3.0.0
 asSQL==2.0.3
 astroid==2.8.0
 attrs==23.1.0
-audiostream==0.2
 beautifulsoup4==4.12.2
 bs4==0.0.1
 certifi==2023.7.22
