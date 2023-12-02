@@ -59,7 +59,7 @@ async def start(client: Client, message: Message):
                      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⦗ DEV SoFe ⦘", url="https://t.me/SoFe_Iraq")]]),
                      reply_to_message_id=message.message_id)
 
-@app.on_message(filters.text & filters.private)
+@Client.on_message(filters.text & filters.private)
 async def on_text(c: Client, m: types.Message):
     text = m.text
     if re.findall("((www\.|http://|https://)(www\.)*.*?(?=(www\.|http://|https://|$)))", text):
