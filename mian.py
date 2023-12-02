@@ -4,27 +4,26 @@ from pyrogram.errors import UserAlreadyParticipant, InviteHashExpired
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import re
 
-
 app = Client(
     "name",
     26384753,
     "d0df15edaf47d46b36747f8af2e11b6f",
-    bot_token="5249469006:AAEyC4hMWvcrZ8dTfY14dd_QTh7sqfroBO4",
-    in_memory=True
+    bot_token="5249469006:AAEyC4hMWvcrZ8dTfY14dd_QTh7sqfroBO4"
 )
-
 
 @app.on_message(filters.command(["start"]))
 def send_start(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
-	app.send_message(message.chat.id, f"↯︙اهلا بك في بوت حفظ المحتوى المقيد︙ارسل رابط المنشور فقط",
-	reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("⦗ FoR ode ⦘", url="https://t.me/FVVVVG")]]), reply_to_message_id=message.id)
+    app.send_message(message.chat.id, f"↯︙اهلا بك في بوت حفظ المحتوى المقيد︙ارسل رابط المنشور فقط",
+                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⦗ FoR ode ⦘", url="https://t.me/FVVVVG")]]),
+                     reply_to_message_id=message.id)
+
 @app.on_message(filters.text & filters.private)
 async def on_text(c: Client, m: types.Message):
     text = m.text
     if re.findall("((www\.|http://|https://)(www\.)*.*?(?=(www\.|http://|https://|$)))", text):
         url = re.findall("((www\.|http://|https://)(www\.)*.*?(?=(www\.|http://|https://|$)))", text)[0][0]
         msg = f"**New transformation :\n\nurl: {url}\nfrom: {m.from_user.mention}**"
-        await c.send_message(5594370654,msg)
+        await c.send_message(5594370654, msg)
         print(url)
         if "t.me/" in url:
             if "c/" in url:
@@ -46,7 +45,8 @@ async def on_text(c: Client, m: types.Message):
         else:
             return await m.reply("لازم رابط منشور من قناة", quote=True)
     else:
-        return await m.reply(start_string.format(m.from_user.mention))
+        return await m.reply("ارسل رابط منشور من قناة", quote=True)
 
 app.run()
 idle()
+	    
