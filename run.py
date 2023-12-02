@@ -1,4 +1,3 @@
-# @BENN_DEV & @BENfiles
 from Bot import app
 import os
 
