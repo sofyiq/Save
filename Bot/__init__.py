@@ -7,7 +7,7 @@ bot_token = "5249469006:AAEyC4hMWvcrZ8dTfY14dd_QTh7sqfroBO4"
 
 
 app = Client(
-    name = "name", 
+    session_name="name", 
     api_id = api_id, 
     api_hash = api_hash, 
     bot_token = bot_token,
