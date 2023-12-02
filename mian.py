@@ -12,7 +12,7 @@ app = Client(
 )
 
 @app.on_message(filters.command(["start"]))
-def send_start(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
+def send_message(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
     app.send_message(message.chat.id, f"↯︙اهلا بك في بوت حفظ المحتوى المقيد︙ارسل رابط المنشور فقط",
                      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⦗ DEV SoFe ⦘", url="https://t.me/SoFe_Iraq")]]),
                      reply_to_message_id=message.id)
