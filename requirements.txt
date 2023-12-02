@@ -1,2 +1,2 @@
-pyromod==0.2.6
+pyromod>=0.3.2
 pyrogram==1.3.7
