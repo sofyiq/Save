@@ -1,4 +1,4 @@
-from pyrogram import Client, filters
+from pyrogram import Client, filters, types
 from pyrogram.types import Message, InlineKeyboardMarkup as Keyboard, InlineKeyboardButton as Button 
 from Bot.funcs import read, write
 import pyrogram
